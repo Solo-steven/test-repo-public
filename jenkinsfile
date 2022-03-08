@@ -1,0 +1,12 @@
+{
+  agent any
+  stages {
+    stage("Build") {
+      steps{
+        echo "Build Angular"
+        sh 'docker-compose down'
+        sh 'docker-compose up'
+      }
+    }
+  }
+}
